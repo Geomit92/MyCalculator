@@ -18,14 +18,29 @@ namespace MyCalculator
             Console.WriteLine("Type a number, and then press Enter");
             // Line 13: convert num1 to integer
             num1 = int.Parse(Console.ReadLine());
-            
+
+            // Check num1 for a positive number
+            while (num1 < 0)
+            {
+                Console.WriteLine("Type a positive number, and then press Enter");
+                num1 = int.Parse(Console.ReadLine());
+            }
+
+
 
             // Ask the user to type the second number
             Console.WriteLine("Type another number, and then press Enter");
             // Line 18: convert num2 to integer
             num2 = int.Parse(Console.ReadLine());
-            
 
+            // Check num2 for a Positive number 
+            while (num2 < 0)
+            {
+                Console.WriteLine("Type a positive number, and then press Enter");
+                num2 = int.Parse(Console.ReadLine());
+            }
+          
+            
             // Ask the user to choose an option
             Console.WriteLine("Choose an option from the following list:");
             Console.WriteLine("\ta - Add");
@@ -38,7 +53,7 @@ namespace MyCalculator
             switch (Console.ReadLine())
             {
                 case "a":
-                    Console.WriteLine("Your result: {num1} + {num2} = " + (num1 + num2)); // Line 32
+                    Console.WriteLine($"Your result: {num1} + {num2} = " + (num1 + num2)); // Line 32
                     break;
                 case "s":
                     Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
