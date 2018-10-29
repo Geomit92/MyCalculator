@@ -8,7 +8,7 @@ namespace MyCalculator
         static void Main(string[] args)
         {
             // Declare variables and then instantiate to zero
-            int num1 = 0; int num2 = 0;
+            float num1 = 0; float num2 = 0;
 
             // Display title as the C# console calculator app
             Console.WriteLine("Console Calculator in C#\r");
@@ -17,41 +17,56 @@ namespace MyCalculator
             // Ask the user to type the first number
             Console.WriteLine("Type a number, and then press Enter");
             // Line 13: convert num1 to integer
-            num1 = int.Parse(Console.ReadLine());
+            num1 = float.Parse(Console.ReadLine());
 
+            while ((num1 < -100.0 || num1 > 100.0))
+            {
+                Console.WriteLine("Type a number (-100.0 to 100.0), and then press Enter");
+                num1 = float.Parse(Console.ReadLine());
+            }
+            /* Accept only a number in range -100,100
             while ((num1 < -100 || num1 > 100))
             {
                 Console.WriteLine("Type a number (-100 to 100), and then press Enter");
                 num1 = int.Parse(Console.ReadLine());
             }
 
-            /* Check for a positive num1 and max 100
+            Check for a positive num1 and max 100
             while ((num1 < 0) || (num1 > 100))
             {
                 Console.WriteLine("Type a positive number (maxed 100), and then press Enter");
                 num1 = int.Parse(Console.ReadLine());
             }
+
             Check for a positive num1
             while (num1 < 0)
             {
                 Console.WriteLine("Type a positive number, and then press Enter");
                 num1 = int.Parse(Console.ReadLine());
             }
+
             */
 
 
             // Ask the user to type the second number
             Console.WriteLine("Type another number, and then press Enter");
             // Line 18: convert num2 to integer
-            num2 = int.Parse(Console.ReadLine());
+            num2 = float.Parse(Console.ReadLine());
 
+            while ((num2 < -100.0 || num2 > 100.0))
+            {
+                Console.WriteLine("Type a number (-100.0 to 100.0), and then press Enter");
+                num2 = float.Parse(Console.ReadLine());
+            } 
+
+            /* Accept only a number in range -100,100
             while ((num2 < -100 || num2 > 100))
             {
                 Console.WriteLine("Type a number (-100 to 100), and then press Enter");
                 num2 = int.Parse(Console.ReadLine());
             }
 
-            /* Check for a positive num2 and max 100
+            Check for a positive num2 and max 100
             while ((num2 < 0) || (num2 > 100))
             {
                 Console.WriteLine("Type a positive number (maxed 100), and then press Enter");
