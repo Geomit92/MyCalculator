@@ -19,13 +19,19 @@ namespace MyCalculator
             // Line 13: convert num1 to integer
             num1 = int.Parse(Console.ReadLine());
 
-            // Check for a positive num1 and max 100
+            while ((num1 < -100 || num1 > 100))
+            {
+                Console.WriteLine("Type a number (-100 to 100), and then press Enter");
+                num1 = int.Parse(Console.ReadLine());
+            }
+
+            /* Check for a positive num1 and max 100
             while ((num1 < 0) || (num1 > 100))
             {
                 Console.WriteLine("Type a positive number (maxed 100), and then press Enter");
                 num1 = int.Parse(Console.ReadLine());
             }
-            /* Check for a positive num1
+            Check for a positive num1
             while (num1 < 0)
             {
                 Console.WriteLine("Type a positive number, and then press Enter");
@@ -39,14 +45,21 @@ namespace MyCalculator
             // Line 18: convert num2 to integer
             num2 = int.Parse(Console.ReadLine());
 
-            // Check for a positive num2 and max 100
+            while ((num2 < -100 || num2 > 100))
+            {
+                Console.WriteLine("Type a number (-100 to 100), and then press Enter");
+                num2 = int.Parse(Console.ReadLine());
+            }
+
+            /* Check for a positive num2 and max 100
             while ((num2 < 0) || (num2 > 100))
             {
                 Console.WriteLine("Type a positive number (maxed 100), and then press Enter");
                 num2 = int.Parse(Console.ReadLine());
             }
 
-            /* Check num2 for a Positive number 
+            Check num2 for a Positive number 
+
             while (num2 < 0)
             {
                 Console.WriteLine("Type a positive number, and then press Enter");
